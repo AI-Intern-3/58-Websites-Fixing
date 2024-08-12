@@ -1,6 +1,4 @@
-Here's the Markdown format with commands and solutions tailored for hosting on a GoDaddy web hosting server:
 
-```markdown
 ### Issue: Forbidden Access for https://aicte.campustv.rocks
 
 **Steps to Resolve:**
