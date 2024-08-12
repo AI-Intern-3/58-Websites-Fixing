@@ -1,6 +1,4 @@
-Here's the Markdown format with all commands and steps for the solution:
 
-```markdown
 ### Issue: The Page is Not Working
 
 **Steps:**
