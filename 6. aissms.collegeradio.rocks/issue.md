@@ -1,5 +1,7 @@
+Here's the Markdown format for addressing various issues, including reachability, for `https://app.campusradio.rocks`, with a focus on general steps suitable for GoDaddy hosting:
 
-### Issue: This Site Can't Be Reached for https://aissms.collegeradio.rocks
+```markdown
+### Issue: Various Issues Including Reachability for https://app.campusradio.rocks
 
 **Steps to Resolve:**
 
@@ -9,14 +11,14 @@
 
    ```bash
    # Use `dig` to check DNS records
-   dig aissms.collegeradio.rocks
+   dig app.campusradio.rocks
 
    # Verify that the A record points to the correct IP address of your server
    ```
 
    **Check DNS Propagation:**
 
-   - Use an online DNS propagation checker tool (e.g., [WhatsMyDNS](https://www.whatsmydns.net/)) to verify if DNS changes have propagated globally.
+   - Use an online DNS propagation checker tool (e.g., [WhatsMyDNS](https://www.whatsmydns.net/)) to ensure DNS changes have propagated globally.
 
    **Update DNS Settings:**
 
@@ -25,9 +27,8 @@
      - **Go to your GoDaddy dashboard.**
      - **Select "My Products" and find your domain.**
      - **Click "DNS" next to the domain name.**
-   - **Ensure that the A record is pointing to your server's IP address.**
-     - **If necessary, update the A record or other relevant DNS settings.**
-   - **Save changes and wait for DNS propagation.**
+   - **Verify and update the A record or other relevant DNS settings if needed.**
+   - **Save changes and allow time for DNS propagation.**
 
 2. **Ensure Server is Running and Accessible**
 
@@ -35,18 +36,18 @@
 
    - **Log in to your GoDaddy account.**
    - **Go to your hosting dashboard.**
-   - **Ensure that your hosting account is active and the server is running.**
+   - **Check that your hosting account is active and verify the server status.**
 
    **Check Server Connectivity:**
 
    ```bash
-   # Use the ping command to check connectivity to your server
-   ping aissms.collegeradio.rocks
+   # Use the ping command to check if the server is reachable
+   ping app.campusradio.rocks
    ```
 
    **Check if the Web Server Service is Running:**
 
-   - **If you have SSH access (not common with GoDaddy's shared hosting), use these commands:**
+   - **For shared hosting, this is managed via GoDaddy’s control panel. For other types of hosting, if you have SSH access, you might use:**
      ```bash
      # Check the status of Apache (if applicable)
      sudo systemctl status apache2
@@ -56,13 +57,25 @@
 
    **Restart the Web Server if Necessary:**
 
-   - **Restart the web server service via GoDaddy’s hosting control panel if you encounter issues.**
+   - **Restart the web server service through GoDaddy’s hosting control panel if there are issues.**
 
-   **Check Firewall Settings:**
+3. **Verify File Permissions**
 
-   - **Ensure that firewall settings are not blocking access. This is usually managed via GoDaddy’s hosting control panel.**
+   **Check and Set File Permissions:**
 
-**Note:** For GoDaddy web hosting, many of these tasks, such as managing DNS settings and server status, can be done through the GoDaddy control panel. If issues persist, contacting GoDaddy support for assistance is recommended.
+   - **Log in to GoDaddy’s File Manager:**
+     - **Go to your GoDaddy hosting control panel.**
+     - **Open the File Manager and navigate to your website’s directory.**
+   - **Check the permissions of directories and files:**
+     - **Directories should be set to `755`.**
+     - **Files should be set to `644`.**
+
+   **Adjust Permissions if Needed:**
+
+   - **Select the files or directories needing permission changes.**
+   - **Use the permission options in the File Manager to adjust permissions.**
+
+**Note:** If issues persist after performing these steps, consider reaching out to GoDaddy support for further assistance. They can help with specific hosting issues that may not be resolved through general troubleshooting steps.
 ```
 
-This guide covers DNS verification and server accessibility specifically for GoDaddy web hosting environments.
+This guide provides comprehensive steps to diagnose and resolve reachability issues for your GoDaddy-hosted server, including DNS verification, server status checks, and file permissions.
