@@ -1,6 +1,4 @@
-Here's the Markdown format for addressing various issues, including reachability, for `https://app.campusradio.rocks`, with a focus on general steps suitable for GoDaddy hosting:
 
-```markdown
 ### Issue: Various Issues Including Reachability for https://app.campusradio.rocks
 
 **Steps to Resolve:**
